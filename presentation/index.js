@@ -7,6 +7,7 @@ import {
   Cite,
   Deck,
   Heading,
+  Image,
   ListItem,
   List,
   Quote,
@@ -30,21 +31,21 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
-
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  dinaLogo: require("../assets/dina-logo.png"),
+  reactLogo: require("../assets/react-logo.png"),
+  graphQLLogo: require("../assets/graphql-logo.png"),
+  oneEndpoint: require("../assets/endpoints.png")
 };
 
 preloader(images);
 
 const theme = createTheme({
   primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  secondary: "#F7646B",
+  tertiary: "black",
+  quartenary: "#5EC5C7"
+  // quartenary: "#CECECE"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -55,12 +56,13 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} margin="2em 0 0" textColor="secondary">
             GraphQL on the Front-end
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="tertiary" margin="0 0 4em" size={1} fit bold>
             Using a GraphQL endpoint on the Front-end side
           </Text>
+          <Image src={images.dinaLogo} width="20%"/>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -76,10 +78,40 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>What is this?</Heading>
+          <Image margin="2.5em 1em 1em" src={images.reactLogo} width="300px"/>
+          <Image margin="2.5em 1em 1em" src={images.graphQLLogo} width="330px"/>
+
+          <Text textColor="tertiary" margin="0 0 2em" size={1} >
+            my aspect
+          </Text>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Pros #1</Heading>
+
+          <Image margin="2.5em 1em 1em" src={images.oneEndpoint} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Pros #2</Heading>
+
           <List>
-            <ListItem>React</ListItem>
-            <ListItem>GraphQL</ListItem>
-            <ListItem>My aspect</ListItem>
+            <ListItem>Easy to understand the basics</ListItem>
+            <ListItem>Client performance first</ListItem>
+            <ListItem>Always up-to-date documentation</ListItem>
+            <ListItem>Reuse query parts</ListItem>
+            <ListItem>Hot topic</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Cons</Heading>
+
+          <List>
+            <ListItem>Breaking changes</ListItem>
+            <ListItem>Deep understanding takes time</ListItem>
+            <ListItem>Extra configuration on the front-end</ListItem>
+            <ListItem>Not that wide toolset</ListItem>
           </List>
         </Slide>
 
