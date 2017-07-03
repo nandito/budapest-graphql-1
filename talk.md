@@ -37,8 +37,30 @@
       * Easy to get help and then easy to help
 
   * Cons
+    * Breaking changes
+      * Because of the rapid development
+    * Deep understanding takes time
+      * If we want to make a more complex application, we have to leave the happy path. This time, we may won't find an out of the box solution. Usually this is the point when we have to stop and think about what happens exactly behind the scenes. And this takes time.
+    * Extra configuration on the front-end
+      * Related to the point above, more complex cases need some extra configuration or customization.
+    * Not that wide toolset / case studies
+      * On the next slide I will mention some great tools but it is easy to see that there far less tools and solutions for GraphQL than for REST
 
 # Tools
+  * GraphiQL
+    * A graphical interactive in-browser GraphQL IDE
+    * Perfect for testing, figure out how things should look like, what to get, prototyping
+    * easy to install
+    * https://github.com/graphql/graphiql
+  * Apollo DevTools
+  * Boilerplates
+    * with ready-to-use configuration
+    * https://reactql.org/
+  * Launchpad
+    * https://launchpad.graphql.com/new
+  * Mocks
+    * Mocks for Testing
+
 # Queries and mutations
 # Example
 

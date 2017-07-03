@@ -8,16 +8,11 @@ import {
   Deck,
   Heading,
   Image,
+  Link,
   ListItem,
   List,
   Quote,
   Slide,
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderItem,
-  TableItem,
-  TableRow,
   Text
 } from "spectacle";
 
@@ -116,50 +111,23 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHeaderItem>Pros</TableHeaderItem>
-                <TableHeaderItem>Cons</TableHeaderItem>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableItem>1 endpoint</TableItem>
-                <TableItem>Breaking changes</TableItem>
-                {/* (because of the rapid development) */}
-              </TableRow>
+          <Heading size={6} textColor="secondary" caps>Tools #1</Heading>
 
-              <TableRow>
-                <TableItem>Easy to understand the basics</TableItem>
-                <TableItem>Deep understanding takes time</TableItem>
-              </TableRow>
-
-              <TableRow>
-                <TableItem>Client performance first</TableItem>
-                {/* always deal with the required minimum amount of data */}
-                <TableItem>Extra configuration on the front-end</TableItem>
-              </TableRow>
-
-              <TableRow>
-                <TableItem>Always up-to-date documentation</TableItem>
-                {/* The schema ^^^  */}
-                <TableItem />
-              </TableRow>
-
-              <TableRow>
-                <TableItem>Reuse query parts</TableItem>
-                 {/* (fragments) */}
-                <TableItem />
-              </TableRow>
-
-              <TableRow>
-                <TableItem>Hot topic</TableItem>
-                {/* many articles, tutorials, active community */}
-                <TableItem />
-              </TableRow>
-            </TableBody>
-          </Table>
+          <List>
+            <ListItem>
+              <Link
+                href="https://graphql-europe.org/graphql"
+                target="_blank"
+                textColor="quartenary"
+              >
+                GraphiQL
+              </Link>
+            </ListItem>
+            <ListItem>Apollo DevTools</ListItem>
+            <ListItem>Boilerplates</ListItem>
+            <ListItem>Launchpad</ListItem>
+            <ListItem>Mocks</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
