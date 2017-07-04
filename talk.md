@@ -11,6 +11,7 @@
   * What is GraphQL?
   * What am I doing here?
     * My aspect
+    * I'm not a senior front-end developer
     * Had a project where we used GraphQL besides the REST API
     * Share the experiences
     * Not the holy grail
@@ -23,6 +24,9 @@
       * No need to provide requests for different kind of datas
       * Get all the necessary data with one query
 
+    * Easy to get started
+      * If you want to just start without doing the configuration as a first step, you can start with an universal starter kits with ready-to-use configuration
+      * Boilerplates, like ReactQL https://reactql.org/
     * Client performance first
       * always deal with the required minimum amount of data
       * so get only the data, what you're going to use
@@ -52,14 +56,26 @@
     * Perfect for testing, figure out how things should look like, what to get, prototyping
     * easy to install
     * https://github.com/graphql/graphiql
+
   * Apollo DevTools
-  * Boilerplates
-    * with ready-to-use configuration
-    * https://reactql.org/
+    * Chrome extension, will appear in the DevTools as a new tab
+    * By default only visible when the app is not in production mode and has apollo-client
+    * Show it on the Lean Coffee
+
   * Launchpad
-    * https://launchpad.graphql.com/new
-  * Mocks
-    * Mocks for Testing
+    * it does not belong to frontend, but worth to mention the Launchpad
+    * codepen/jsfiddle for graphql
+    * in-browser JS back-end with graphql
+    * ideal for prototyping or sharing best practices
+    * find examples on github: https://github.com/apollographql/launchpad
+
+# Clients
+  * To fetch the data from the GraphQL back-end, somehow we have to compose the proper queries send them to the back-end, wait for the response and then handle it.
+  * This flow can be written from scratch, but there are nice clients to do the dirty parts.
+  * You can find several clients, here I'd like to mention the 2 most popular one.
+  * Relay is more complex, developed by Facebook
+  * Apollo is more flexible, developed by Meteor Development Group
+  * I did a test drive with both and when we needed to use one on a project, we decided to use Apollo, thus during the rest of this Presentation, I use examples from Apollo Client.
 
 # Queries and mutations
 # Example

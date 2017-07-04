@@ -30,7 +30,11 @@ const images = {
   dinaLogo: require("../assets/dina-logo.png"),
   reactLogo: require("../assets/react-logo.png"),
   graphQLLogo: require("../assets/graphql-logo.png"),
-  oneEndpoint: require("../assets/endpoints.png")
+  oneEndpoint: require("../assets/endpoints.png"),
+  graphiql: require("../assets/graphiql.png"),
+  apolloDevToolsGraphiQL: require("../assets/apollo-devtools-graphiql.png"),
+  launchpad: require("../assets/launchpad.png"),
+  apolloVsRelay: require("../assets/apollo-vs-relay.png")
 };
 
 preloader(images);
@@ -54,8 +58,11 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} margin="2em 0 0" textColor="secondary">
             GraphQL on the Front-end
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" margin="0 0 4em" size={1} fit bold>
+          <Text textColor="tertiary" size={1} fit bold>
             Using a GraphQL endpoint on the Front-end side
+          </Text>
+          <Text textColor="quartenary" margin=".5em 0 2.5em" textSize="2rem">
+            by Nándor Bíró
           </Text>
           <Image src={images.dinaLogo} width="20%"/>
         </Slide>
@@ -91,6 +98,14 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="secondary" caps>Pros #2</Heading>
 
           <List>
+            <ListItem>Easy to get started (eg.:
+            <Link
+              href="https://reactql.org/"
+              target="_blank"
+              textColor="quartenary"
+            >
+              ReactQL
+            </Link>)</ListItem>
             <ListItem>Easy to understand the basics</ListItem>
             <ListItem>Client performance first</ListItem>
             <ListItem>Always up-to-date documentation</ListItem>
@@ -122,12 +137,33 @@ export default class Presentation extends React.Component {
               >
                 GraphiQL
               </Link>
+              <Image src={images.graphiql} width="75%" display="block" />
             </ListItem>
-            <ListItem>Apollo DevTools</ListItem>
-            <ListItem>Boilerplates</ListItem>
-            <ListItem>Launchpad</ListItem>
-            <ListItem>Mocks</ListItem>
           </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Tools #2</Heading>
+
+          <List>
+            <ListItem>Apollo DevTools</ListItem>
+            <Image src={images.apolloDevToolsGraphiQL} width="75%" display="block" />
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Tools #3</Heading>
+
+          <List>
+            <ListItem>Launchpad</ListItem>
+            <Image src={images.launchpad} width="75%" display="block" />
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Clients</Heading>
+
+          <Image src={images.apolloVsRelay} width="100%" display="block" />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
