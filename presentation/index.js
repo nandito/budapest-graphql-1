@@ -59,7 +59,7 @@ export default class Presentation extends React.Component {
             GraphQL on the Front-end
           </Heading>
           <Text textColor="tertiary" size={1} fit bold>
-            Using a GraphQL endpoint on the Front-end side
+            Using a GraphQL endpoint in a React app
           </Text>
           <Text textColor="quartenary" margin=".5em 0 2.5em" textSize="2rem">
             by Nándor Bíró
