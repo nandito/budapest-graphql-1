@@ -118,7 +118,6 @@ export default class Presentation extends React.Component {
             >
               ReactQL
             </Link>)</ListItem>
-            <Appear><ListItem>Easy to understand the basics</ListItem></Appear>
             <Appear><ListItem>Client performance first</ListItem></Appear>
             <Appear><ListItem>Always up-to-date documentation</ListItem></Appear>
             <Appear><ListItem>Reuse query parts</ListItem></Appear>
