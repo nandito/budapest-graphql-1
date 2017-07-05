@@ -1,0 +1,18 @@
+const createShop = gql`
+  mutation create_shop($input: CreateShopInput!) {
+    create_shop(input: $input) {
+      shop {
+        name
+      }
+    }
+  }
+`
+
+const NewShopWithMutation = graphql(createShop, {
+  props: ({ mutate }) => ({
+    submit: (name) => mutate({
+      refetchQueries: [{ query: shops }],
+      variables: { input: { name } }
+    }),
+  }),
+})(NewShop)

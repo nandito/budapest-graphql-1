@@ -4,6 +4,7 @@ import React from "react";
 // Import Spectacle Core tags
 import {
   Appear,
+  Code,
   CodePane,
   Deck,
   Heading,
@@ -40,7 +41,12 @@ const examples = {
   query: require("raw-loader!../examples/query.example"),
   queryImplementation: require("raw-loader!../examples/query-implementation.example"),
   queryWithOptions: require("raw-loader!../examples/query-with-options.example"),
-  mutation: require("raw-loader!../examples/mutation.example")
+  mutation: require("raw-loader!../examples/mutation.example"),
+  config: require("raw-loader!../examples/config.example"),
+  mainApp: require("raw-loader!../examples/main-app.example"),
+  shopList: require("raw-loader!../examples/shop-list.example"),
+  newShop: require("raw-loader!../examples/new-shop.example"),
+  newShopWithMutation: require("raw-loader!../examples/new-shop-with-mutation.example")
 };
 
 preloader(images);
@@ -211,6 +217,42 @@ export default class Presentation extends React.Component {
             <ListItem>Refetch / update</ListItem>
             <Appear><ListItem>Optimistic UI</ListItem></Appear>
           </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Demo time! - config</Heading>
+
+          <List>
+            <Appear><ListItem><Code>npm i -g reactql</Code></ListItem></Appear>
+            <Appear><ListItem><Code>reactql new</Code></ListItem></Appear>
+            <Appear><ListItem>Clear <Code>src</Code> folder</ListItem></Appear>
+          </List>
+
+          <Appear><CodePane lang="jsx" source={examples.config} /></Appear>
+
+          <List>
+            <Appear><ListItem>Create <Code>src/app.js</Code></ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Main app</Heading>
+          <Appear><CodePane lang="jsx" source={examples.mainApp} /></Appear>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>List shops</Heading>
+          <Appear><CodePane lang="jsx" source={examples.shopList} /></Appear>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>New shop</Heading>
+          <Appear><CodePane lang="jsx" source={examples.newShop} /></Appear>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>New shop with mutation</Heading>
+          <Appear><CodePane lang="jsx" source={examples.newShopWithMutation} /></Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
