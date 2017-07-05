@@ -1,0 +1,13 @@
+import React, { Component } from 'react'
+import { gql, graphql } from 'react-apollo'
+
+class CreateConference extends Component { ... }
+
+const submitConference = gql`
+  mutation submitConference($name: String!) {
+    conference(name: $name) {
+      edition
+    }
+  }
+`
+const CreateConferenceWithData = graphql(submitConference)(CreateConference)

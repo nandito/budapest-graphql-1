@@ -5,6 +5,7 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  CodePane,
   Deck,
   Heading,
   Image,
@@ -35,6 +36,13 @@ const images = {
   apolloDevToolsGraphiQL: require("../assets/apollo-devtools-graphiql.png"),
   launchpad: require("../assets/launchpad.png"),
   apolloVsRelay: require("../assets/apollo-vs-relay.png")
+};
+
+const examples = {
+  query: require("raw-loader!../examples/query.example"),
+  queryImplementation: require("raw-loader!../examples/query-implementation.example"),
+  queryWithOptions: require("raw-loader!../examples/query-with-options.example"),
+  mutation: require("raw-loader!../examples/mutation.example")
 };
 
 preloader(images);
@@ -164,6 +172,47 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="secondary" caps>Clients</Heading>
 
           <Image src={images.apolloVsRelay} width="100%" display="block" />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Queries #1</Heading>
+
+          <List>
+            <ListItem>For get data</ListItem>
+          </List>
+
+          <CodePane lang="graphql" source={examples.query} margin="0 0 1rem" />
+
+          <CodePane lang="jsx" source={examples.queryImplementation} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Queries #2</Heading>
+
+          <List>
+            <ListItem>Options and variables</ListItem>
+          </List>
+
+          <CodePane lang="jsx" source={examples.queryWithOptions} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Mutations #1</Heading>
+
+          <List>
+            <ListItem>Submit changes on the back-end</ListItem>
+          </List>
+
+          <CodePane lang="jsx" source={examples.mutation} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Mutations #2</Heading>
+
+          <List>
+            <ListItem>Refetch / update</ListItem>
+            <ListItem>Optimistic UI</ListItem>
+          </List>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">

@@ -1,0 +1,14 @@
+import React, { Component } from 'react'
+import { gql, graphql } from 'react-apollo'
+
+class ConferenceList extends Component { ... }
+
+const conferences = gql`
+  query conferences {
+    conferences {
+      name
+      year
+    }
+  }
+`
+const ConferenceListWithData = graphql(conferences)(ConferenceList)

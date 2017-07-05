@@ -77,7 +77,35 @@
   * Apollo is more flexible, developed by Meteor Development Group
   * I did a test drive with both and when we needed to use one on a project, we decided to use Apollo, thus during the rest of this Presentation, I use examples from Apollo Client.
 
-# Queries and mutations
+# Queries #1
+  * Let's see the queries first. Queries can be used to fetch data.
+  * The anatomy of a query looks like this. As we saw it in the GraphiQL
+  * And how can we use it? Just wrap it with a gql tags and connect to your component by using graphql.
+  * And we are done, when you open your ConferenceListWithData component, it will contain the data.
+  * Behind the scenes:
+    * Apollo uses a Redux for storing the data. Redux is a popular state container which works pretty good with React.
+    * First we open this component, it goes to the back-end fetches the data and loads it to the store.
+    * If it is not the first load the query will be loaded from the data store.
+    * And there will be a subscription here for the changes, too.
+
+# Queries #2
+  * What else can we do here?
+  * We can set options and variables for the queries.
+  * Here the edition variable is hard-coded but we can compute it from props.
+  * Also we can specify pollInterval here
+
+# Mutations #1
+  * While with queries we can get data, with mutations we can create, modify or delete it
+  * The syntax is very similar to queries'
+  * We can fire them by events or pass arguments
+
+# Mutations #2
+  * There are some other things worth to mention around mutations
+  * Once we do some update on the back-end, we may want to see these changes on the front-end, too
+  * To do this, we can use refetchQueries, where we can specify queries what we want to fetch again. This is the simplest way to update the cache.
+  * Or we can use the update what gives full control over the cache.
+  * There is Optimistic UI support, too. This way we can show an expected fake data, until we get the real response. For example if we add an item to the list, we enter the item's name, submit the mutation. We can show the item immediately.
+
 # Example
 
 # Summary
