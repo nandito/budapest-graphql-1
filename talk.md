@@ -71,7 +71,7 @@
 
 # Clients
   * To fetch the data from the GraphQL back-end, somehow we have to compose the proper queries send them to the back-end, wait for the response and then handle it.
-  * This flow can be written from scratch, but there are nice clients to do the dirty parts.
+  * This flow can be written from scratch, but there are nice clients with a very useful set of functions and they can do the dirty parts.
   * You can find several clients, here I'd like to mention the 2 most popular one.
   * Relay is more complex, developed by Facebook
   * Apollo is more flexible, developed by Meteor Development Group
