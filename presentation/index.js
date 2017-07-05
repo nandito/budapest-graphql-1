@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   CodePane,
   Deck,
   Heading,
@@ -76,21 +77,21 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="secondary" caps>Agenda</Heading>
           <List>
             <ListItem>What is this?</ListItem>
-            <ListItem>Pros and Cons</ListItem>
-            <ListItem>Tools</ListItem>
-            <ListItem>Queries and mutations</ListItem>
-            <ListItem>Example</ListItem>
+            <Appear><ListItem>Pros and Cons</ListItem></Appear>
+            <Appear><ListItem>Tools</ListItem></Appear>
+            <Appear><ListItem>Queries and mutations</ListItem></Appear>
+            <Appear><ListItem>Example</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>What is this?</Heading>
-          <Image margin="2.5em 1em 1em" src={images.reactLogo} width="300px"/>
-          <Image margin="2.5em 1em 1em" src={images.graphQLLogo} width="330px"/>
+          <Appear><Image margin="2.5em 1em 1em" src={images.reactLogo} width="300px"/></Appear>
+          <Appear><Image margin="2.5em 1em 1em" src={images.graphQLLogo} width="330px"/></Appear>
 
-          <Text textColor="tertiary" margin="0 0 2em" size={1} >
+          <Appear><Text textColor="tertiary" margin="0 0 2em" size={1} >
             my aspect
-          </Text>
+          </Text></Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -111,11 +112,11 @@ export default class Presentation extends React.Component {
             >
               ReactQL
             </Link>)</ListItem>
-            <ListItem>Easy to understand the basics</ListItem>
-            <ListItem>Client performance first</ListItem>
-            <ListItem>Always up-to-date documentation</ListItem>
-            <ListItem>Reuse query parts</ListItem>
-            <ListItem>Hot topic</ListItem>
+            <Appear><ListItem>Easy to understand the basics</ListItem></Appear>
+            <Appear><ListItem>Client performance first</ListItem></Appear>
+            <Appear><ListItem>Always up-to-date documentation</ListItem></Appear>
+            <Appear><ListItem>Reuse query parts</ListItem></Appear>
+            <Appear><ListItem>Hot topic</ListItem></Appear>
           </List>
         </Slide>
 
@@ -124,9 +125,9 @@ export default class Presentation extends React.Component {
 
           <List>
             <ListItem>Breaking changes</ListItem>
-            <ListItem>Deep understanding takes time</ListItem>
-            <ListItem>Extra configuration on the front-end</ListItem>
-            <ListItem>Not that wide toolset</ListItem>
+            <Appear><ListItem>Deep understanding takes time</ListItem></Appear>
+            <Appear><ListItem>Extra configuration on the front-end</ListItem></Appear>
+            <Appear><ListItem>Not that wide toolset</ListItem></Appear>
           </List>
         </Slide>
 
@@ -168,7 +169,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Clients</Heading>
 
-          <Image src={images.apolloVsRelay} width="100%" display="block" />
+          <Appear><Image src={images.apolloVsRelay} width="100%" display="block" /></Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -178,9 +179,9 @@ export default class Presentation extends React.Component {
             <ListItem>For get data</ListItem>
           </List>
 
-          <CodePane lang="graphql" source={examples.query} margin="0 0 1rem" />
+          <Appear><CodePane lang="graphql" source={examples.query} margin="0 0 1rem" /></Appear>
 
-          <CodePane lang="jsx" source={examples.queryImplementation} />
+          <Appear><CodePane lang="jsx" source={examples.queryImplementation} /></Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -190,7 +191,7 @@ export default class Presentation extends React.Component {
             <ListItem>Options and variables</ListItem>
           </List>
 
-          <CodePane lang="jsx" source={examples.queryWithOptions} />
+          <Appear><CodePane lang="jsx" source={examples.queryWithOptions} /></Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -200,7 +201,7 @@ export default class Presentation extends React.Component {
             <ListItem>Submit changes on the back-end</ListItem>
           </List>
 
-          <CodePane lang="jsx" source={examples.mutation} />
+          <Appear><CodePane lang="jsx" source={examples.mutation} /></Appear>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -208,7 +209,7 @@ export default class Presentation extends React.Component {
 
           <List>
             <ListItem>Refetch / update</ListItem>
-            <ListItem>Optimistic UI</ListItem>
+            <Appear><ListItem>Optimistic UI</ListItem></Appear>
           </List>
         </Slide>
 
@@ -220,6 +221,67 @@ export default class Presentation extends React.Component {
           </Text>
 
           <Image src={images.dinaLogo} width="20%"/>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Sources</Heading>
+
+          <List>
+            <ListItem>
+              <Link
+                href="https://dev-blog.apollodata.com/why-graphql-is-the-future-3bec28193807"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Jonas Helfer - Why GraphQL is the future
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://philsturgeon.uk/api/2017/01/24/graphql-vs-rest-overview/"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Phil Sturgeon - GraphQL vs REST: Overview
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://dev-blog.apollodata.com/graphql-vs-falcor-4f1e9cbf7504"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Jonas Helfer - GraphQL vs Falcor
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="http://dev.apollodata.com/react/initialization.html"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Apollo client documentation
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Sashko Stubailo - GraphQL vs REST
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.graph.cool/docs/tutorials/relay-vs-apollo-iechu0shia/"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Relay vs Apollo - Comparing GraphQL clients for React apps
+              </Link>
+            </ListItem>
+          </List>
         </Slide>
       </Deck>
     );

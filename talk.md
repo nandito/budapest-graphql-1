@@ -85,7 +85,7 @@
   * Behind the scenes:
     * Apollo uses a Redux for storing the data. Redux is a popular state container which works pretty good with React.
     * First we open this component, it goes to the back-end fetches the data and loads it to the store.
-    * If it is not the first load the query will be loaded from the data store.
+    * If it is not the first load the query will be loaded from the data store. This can be turned off by invalidating the cache - and there are ongoing discussions about possible solutions.
     * And there will be a subscription here for the changes, too.
 
 # Queries #2
