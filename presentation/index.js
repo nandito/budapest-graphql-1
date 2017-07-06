@@ -34,7 +34,8 @@ const images = {
   graphiql: require("../assets/graphiql.png"),
   apolloDevToolsGraphiQL: require("../assets/apollo-devtools-graphiql.png"),
   launchpad: require("../assets/launchpad.png"),
-  apolloVsRelay: require("../assets/apollo-vs-relay.png")
+  apolloVsRelay: require("../assets/apollo-vs-relay.png"),
+  optimisticUi: require("../assets/optimistic-ui.gif")
 };
 
 const examples = {
@@ -215,6 +216,7 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>Refetch / update</ListItem>
             <Appear><ListItem>Optimistic UI</ListItem></Appear>
+            <Appear><Image src={images.optimisticUi} width="60%" display="block" /></Appear>
           </List>
         </Slide>
 
@@ -293,6 +295,15 @@ export default class Presentation extends React.Component {
                 textColor="quartenary"
               >
                 Jonas Helfer - GraphQL vs Falcor
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://dev-blog.apollodata.com/tutorial-graphql-mutations-optimistic-ui-and-store-updates-f7b6b66bf0e2"
+                target="_blank"
+                textColor="quartenary"
+              >
+                Jonas Helfer - Tutorial: Speeding up GraphQL Mutations with optimistic UI
               </Link>
             </ListItem>
             <ListItem>
