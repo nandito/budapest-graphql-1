@@ -1,4 +1,0 @@
-// config/project.js
-export const APOLLO = {
-  uri: 'https://enigmatic-badlands-45171.herokuapp.com/graphiql',
-};

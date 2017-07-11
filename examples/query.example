@@ -1,6 +1,0 @@
-query conferences {
-  conferences {
-    name
-    year
-  }
-}

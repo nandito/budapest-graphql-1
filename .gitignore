@@ -1,4 +1,16 @@
 .DS_Store
 node_modules
 npm-debug.log
-dist
+
+
+LICENSE
+assets
+examples
+index.js
+package.json
+server.js
+webpack.config.js
+webpack.config.production.js
+README.markdown
+presentation
+yarn.lock
